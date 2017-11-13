@@ -61,6 +61,10 @@ volatile boolean tft_ready = 0;
 
 extern volatile uint32 cpu0_idle_counter;
 extern volatile uint32 cpu0_ccnt_diff_min;
+volatile int number = 0;
+volatile int border = 10000000;
+volatile int erg = 0;
+
 
 extern TIME Time2Set;
 extern TCONTROLMENU controlmenu;
@@ -187,6 +191,30 @@ TASK(IFX_OSTASK_BLINK) {
 			IfxPort_getPinState(&MODULE_P13, 0) ?
 					IfxPort_State_low : IfxPort_State_high);
 
+	IfxPort_setPinState(&MODULE_P13, 1,
+			IfxPort_getPinState(&MODULE_P13, 1) ?
+					IfxPort_State_low : IfxPort_State_high);
+	IfxPort_setPinState(&MODULE_P13, 2,
+			IfxPort_getPinState(&MODULE_P13, 2) ?
+					IfxPort_State_low : IfxPort_State_high);
+	IfxPort_setPinState(&MODULE_P13, 3,
+			IfxPort_getPinState(&MODULE_P13, 3) ?
+					IfxPort_State_low : IfxPort_State_high);
+
+}
+
+
+int fibonacci_helper(volatile int number,volatile int border)
+{
+	if(number > border)
+		return number;
+	number+=fibonacci_helper(number+1, border);
+	return number;
+	}
+
+TASK(IFX_OSTASK_FIBONACCI)
+{
+	erg =  fibonacci_helper(number, border);
 }
 
 uint32 Ifx_OSTask_Event2_Count;

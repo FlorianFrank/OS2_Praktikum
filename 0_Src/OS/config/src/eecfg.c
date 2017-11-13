@@ -12,12 +12,14 @@
     #define STACK_3_SIZE 256 /* size = 256 bytes */
     #define STACK_4_SIZE 256 /* size = 256 bytes */
     #define STACK_5_SIZE 256 /* size = 256 bytes */
+    #define STACK_6_SIZE 256 /* size = 256 bytes */
 
     EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_1[EE_STACK_WLEN(STACK_1_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_1);	/* Task 0 (IFX_OSTASK_EVENT1) */
     EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_2[EE_STACK_WLEN(STACK_2_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_2);	/* Task 1 (IFX_OSTASK_EVENT2) */
     EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_3[EE_STACK_WLEN(STACK_3_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_3);	/* Task 2 (IFX_OSTASK_EVENT3) */
     EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_4[EE_STACK_WLEN(STACK_4_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_4);	/* Task 3 (IFX_OSTASK_BLINK) */
-    EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_5[EE_STACK_WLEN(STACK_5_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_5);	/* irq stack */
+    EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_5[EE_STACK_WLEN(STACK_5_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_5);	/* Task 4 (IFX_OSTASK_FIBONACCI) */
+    EE_STACK_T EE_STACK_ATTRIB EE_tc_stack_6[EE_STACK_WLEN(STACK_6_SIZE)] EE_TC_FILL_STACK(EE_tc_stack_6);	/* irq stack */
 
     const EE_UREG EE_std_thread_tos[EE_MAX_TASK+1] = {
         0U,	/* dummy */
@@ -25,6 +27,7 @@
         2U,	/* IFX_OSTASK_EVENT2 */
         3U,	/* IFX_OSTASK_EVENT3 */
         4U,	/* IFX_OSTASK_BLINK */
+        5U,	/* IFX_OSTASK_FIBONACCI */
         0U,	/* IFX_OSTASK_1MS */
         0U,	/* IFX_OSTASK_5MS */
         0U,	/* IFX_OSTASK_10MS */
@@ -37,12 +40,13 @@
         0U 	/* IFX_OSTASK_INIT */
     };
 
-    struct EE_TC_TOS EE_tc_system_tos[5] = {
-        {0, 0U},	/* Task   (dummy), Task 4 (IFX_OSTASK_1MS), Task 5 (IFX_OSTASK_5MS), Task 6 (IFX_OSTASK_10MS), Task 7 (IFX_OSTASK_20MS), Task 8 (IFX_OSTASK_50MS), Task 9 (IFX_OSTASK_100MS), Task 10 (IFX_OSTASK_BEEPER), Task 11 (IFX_OSTASK_1000MS), Task 12 (IFX_OSTASK_BACKGROUND), Task 13 (IFX_OSTASK_INIT) */
+    struct EE_TC_TOS EE_tc_system_tos[6] = {
+        {0, 0U},	/* Task   (dummy), Task 5 (IFX_OSTASK_1MS), Task 6 (IFX_OSTASK_5MS), Task 7 (IFX_OSTASK_10MS), Task 8 (IFX_OSTASK_20MS), Task 9 (IFX_OSTASK_50MS), Task 10 (IFX_OSTASK_100MS), Task 11 (IFX_OSTASK_BEEPER), Task 12 (IFX_OSTASK_1000MS), Task 13 (IFX_OSTASK_BACKGROUND), Task 14 (IFX_OSTASK_INIT) */
         {EE_STACK_INITP(EE_tc_stack_1), 0U},	/* Task 0 (IFX_OSTASK_EVENT1) */
         {EE_STACK_INITP(EE_tc_stack_2), 0U},	/* Task 1 (IFX_OSTASK_EVENT2) */
         {EE_STACK_INITP(EE_tc_stack_3), 0U},	/* Task 2 (IFX_OSTASK_EVENT3) */
-        {EE_STACK_INITP(EE_tc_stack_4), 0U} 	/* Task 3 (IFX_OSTASK_BLINK) */
+        {EE_STACK_INITP(EE_tc_stack_4), 0U},	/* Task 3 (IFX_OSTASK_BLINK) */
+        {EE_STACK_INITP(EE_tc_stack_5), 0U} 	/* Task 4 (IFX_OSTASK_FIBONACCI) */
     };
 
     EE_UREG EE_tc_active_tos = 0U;/* dummy */
@@ -51,7 +55,7 @@
 
     /* stack used only by IRQ handlers */
     struct EE_TOS EE_tc_IRQ_tos = {
-        EE_STACK_INITP(EE_tc_stack_5)
+        EE_STACK_INITP(EE_tc_stack_6)
     };
 
 
@@ -66,6 +70,7 @@
     DeclareTask(IFX_OSTASK_EVENT2);
     DeclareTask(IFX_OSTASK_EVENT3);
     DeclareTask(IFX_OSTASK_BLINK);
+    DeclareTask(IFX_OSTASK_FIBONACCI);
     DeclareTask(IFX_OSTASK_1MS);
     DeclareTask(IFX_OSTASK_5MS);
     DeclareTask(IFX_OSTASK_10MS);
@@ -82,6 +87,7 @@
         &EE_oo_thread_stub,		 /* thread IFX_OSTASK_EVENT2 */
         &EE_oo_thread_stub,		 /* thread IFX_OSTASK_EVENT3 */
         &EE_oo_thread_stub,		 /* thread IFX_OSTASK_BLINK */
+        &EE_oo_thread_stub,		 /* thread IFX_OSTASK_FIBONACCI */
         &EE_oo_thread_stub,		 /* thread IFX_OSTASK_1MS */
         &EE_oo_thread_stub,		 /* thread IFX_OSTASK_5MS */
         &EE_oo_thread_stub,		 /* thread IFX_OSTASK_10MS */
@@ -103,6 +109,7 @@
         &FuncIFX_OSTASK_EVENT2,
         &FuncIFX_OSTASK_EVENT3,
         &FuncIFX_OSTASK_BLINK,
+        &FuncIFX_OSTASK_FIBONACCI,
         &FuncIFX_OSTASK_1MS,
         &FuncIFX_OSTASK_5MS,
         &FuncIFX_OSTASK_10MS,
@@ -120,6 +127,7 @@
         0x40U,		 /* thread IFX_OSTASK_EVENT2 */
         0x40U,		 /* thread IFX_OSTASK_EVENT3 */
         0x40U,		 /* thread IFX_OSTASK_BLINK */
+        0x40U,		 /* thread IFX_OSTASK_FIBONACCI */
         0x40U,		 /* thread IFX_OSTASK_1MS */
         0x20U,		 /* thread IFX_OSTASK_5MS */
         0x10U,		 /* thread IFX_OSTASK_10MS */
@@ -137,6 +145,7 @@
         0x40U,		 /* thread IFX_OSTASK_EVENT2 */
         0x40U,		 /* thread IFX_OSTASK_EVENT3 */
         0x40U,		 /* thread IFX_OSTASK_BLINK */
+        0x40U,		 /* thread IFX_OSTASK_FIBONACCI */
         0x40U,		 /* thread IFX_OSTASK_1MS */
         0x20U,		 /* thread IFX_OSTASK_5MS */
         0x10U,		 /* thread IFX_OSTASK_10MS */
@@ -164,11 +173,13 @@
         SUSPENDED,
         SUSPENDED,
         SUSPENDED,
+        SUSPENDED,
         SUSPENDED
     };
 
     /* next thread */
     EE_TID EE_th_next[EE_MAX_TASK] = {
+        EE_NIL,
         EE_NIL,
         EE_NIL,
         EE_NIL,
@@ -205,6 +216,7 @@
         1U,		 /* thread IFX_OSTASK_EVENT2 */
         1U,		 /* thread IFX_OSTASK_EVENT3 */
         1U,		 /* thread IFX_OSTASK_BLINK */
+        1U,		 /* thread IFX_OSTASK_FIBONACCI */
         1U,		 /* thread IFX_OSTASK_1MS */
         1U,		 /* thread IFX_OSTASK_5MS */
         1U,		 /* thread IFX_OSTASK_10MS */
@@ -222,6 +234,7 @@
         1U,		 /* thread IFX_OSTASK_EVENT2 */
         1U,		 /* thread IFX_OSTASK_EVENT3 */
         1U,		 /* thread IFX_OSTASK_BLINK */
+        1U,		 /* thread IFX_OSTASK_FIBONACCI */
         1U,		 /* thread IFX_OSTASK_1MS */
         1U,		 /* thread IFX_OSTASK_5MS */
         1U,		 /* thread IFX_OSTASK_10MS */
@@ -235,14 +248,14 @@
     };
 
     EE_TYPEPRIO EE_rq_link[EE_MAX_TASK] =
-        { 6U, 6U, 6U, 6U, 6U, 5U, 4U, 3U, 2U, 1U, 1U, 0U, 0U, 1U};
+        { 6U, 6U, 6U, 6U, 6U, 6U, 5U, 4U, 3U, 2U, 1U, 1U, 0U, 0U, 1U};
 
-    /* The pairs that are enqueued into the priority queues (14 is the total number of task activations) */
+    /* The pairs that are enqueued into the priority queues (15 is the total number of task activations) */
     EE_TYPEPAIR EE_rq_pairs_next[] =
-        { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, -1};
+        { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, -1};
 
     /* no need to be initialized */
-    EE_TID EE_rq_pairs_tid[14];
+    EE_TID EE_rq_pairs_tid[15];
 
     /* a list of unused pairs */
     EE_TYPEPAIR EE_rq_free = 0; /* pointer to a free pair */
@@ -250,6 +263,7 @@
     #ifndef __OO_NO_CHAINTASK__
         /* The next task to be activated after a ChainTask. initvalue=all EE_NIL */
         EE_TID EE_th_terminate_nextask[EE_MAX_TASK] = {
+            EE_NIL,
             EE_NIL,
             EE_NIL,
             EE_NIL,
@@ -275,16 +289,16 @@
  *
  **************************************************************************/
     EE_TYPEEVENTMASK EE_th_event_active[EE_MAX_TASK] =
-        { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};    /* thread event already active */
+        { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};    /* thread event already active */
 
     EE_TYPEEVENTMASK EE_th_event_waitmask[EE_MAX_TASK] =
-        { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};    /* thread wait mask */
+        { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};    /* thread wait mask */
 
     EE_TYPEBOOL EE_th_waswaiting[EE_MAX_TASK] =
-        { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};
+        { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};
 
     EE_TYPEPRIO EE_th_is_extended[EE_MAX_TASK] =
-        { 1U, 1U, 1U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};
+        { 1U, 1U, 1U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U};
 
 
 
@@ -336,13 +350,13 @@
  * Auto Start (TASK)
  *
  **************************************************************************/
-    static const EE_TID EE_oo_autostart_task_mode_OSDEFAULTAPPMODE[1] = 
-        { IFX_OSTASK_BLINK };
-    static const EE_TID EE_oo_autostart_task_mode_TRICORE_CPU[2] = 
-        { IFX_OSTASK_BLINK, IFX_OSTASK_INIT };
+    static const EE_TID EE_oo_autostart_task_mode_OSDEFAULTAPPMODE[2] = 
+        { IFX_OSTASK_BLINK, IFX_OSTASK_FIBONACCI };
+    static const EE_TID EE_oo_autostart_task_mode_TRICORE_CPU[3] = 
+        { IFX_OSTASK_BLINK, IFX_OSTASK_FIBONACCI, IFX_OSTASK_INIT };
 
     const struct EE_oo_autostart_task_type EE_oo_autostart_task_data[EE_MAX_APPMODE] = {
-        { 1U, EE_oo_autostart_task_mode_OSDEFAULTAPPMODE},
-        { 2U, EE_oo_autostart_task_mode_TRICORE_CPU}
+        { 2U, EE_oo_autostart_task_mode_OSDEFAULTAPPMODE},
+        { 3U, EE_oo_autostart_task_mode_TRICORE_CPU}
     };
 

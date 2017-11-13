@@ -13,21 +13,22 @@
  **************************************************************************/
 
     /* TASK definition */
-    #define EE_MAX_TASK 14
+    #define EE_MAX_TASK 15
     #define IFX_OSTASK_EVENT1 0
     #define IFX_OSTASK_EVENT2 1
     #define IFX_OSTASK_EVENT3 2
     #define IFX_OSTASK_BLINK 3
-    #define IFX_OSTASK_1MS 4
-    #define IFX_OSTASK_5MS 5
-    #define IFX_OSTASK_10MS 6
-    #define IFX_OSTASK_20MS 7
-    #define IFX_OSTASK_50MS 8
-    #define IFX_OSTASK_100MS 9
-    #define IFX_OSTASK_BEEPER 10
-    #define IFX_OSTASK_1000MS 11
-    #define IFX_OSTASK_BACKGROUND 12
-    #define IFX_OSTASK_INIT 13
+    #define IFX_OSTASK_FIBONACCI 4
+    #define IFX_OSTASK_1MS 5
+    #define IFX_OSTASK_5MS 6
+    #define IFX_OSTASK_10MS 7
+    #define IFX_OSTASK_20MS 8
+    #define IFX_OSTASK_50MS 9
+    #define IFX_OSTASK_100MS 10
+    #define IFX_OSTASK_BEEPER 11
+    #define IFX_OSTASK_1000MS 12
+    #define IFX_OSTASK_BACKGROUND 13
+    #define IFX_OSTASK_INIT 14
 
     /* MUTEX definition */
     #define EE_MAX_RESOURCE 0U

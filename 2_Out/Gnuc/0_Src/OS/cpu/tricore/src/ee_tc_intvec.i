@@ -1,5 +1,0 @@
-# 1 "0_Src/OS/cpu/tricore/src/ee_tc_intvec.c"
-# 1 "C:\\betriebssys\\BaseFramework_TC26xB//"
-# 1 "<built-in>"
-# 1 "<command-line>"
-# 1 "0_Src/OS/cpu/tricore/src/ee_tc_intvec.c"
