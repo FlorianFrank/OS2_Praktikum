@@ -1,0 +1,8 @@
+schreiben eines Arrays in ein Textfile:		var.export [filename] %open [format] "varname"
+
+var.export halla.txt %open tbuTimeHallA
+var.export hallb.txt %open tbuTimeHallB
+var.export hallc.txt %open tbuTimeHallC
+var.export time.txt %open tbuTime
+var.export timeStamp.txt %open dpllTimeStamp
+var.export position.txt %open dpllPostion

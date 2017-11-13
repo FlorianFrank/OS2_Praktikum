@@ -1,0 +1,195 @@
+
+;Select CPU type
+setup.var %SPOTLIGHT 
+LOCAL &param_cpu
+&param_cpu=STRing.SCANAndExtract(STRing.UPpeR("&parameters"),"CPU=","")
+SYStem.RESet
+SYStem.CONFIG.DEBUGPORTTYPE DAP2
+system.config.dap.USER1 SET HIGH 
+
+IF SYStem.MODE()<5
+(
+    SYStem.RESet
+
+    IF "&param_cpu"!=""
+      SYStem.CPU &param_cpu
+    IF !CPUIS(TC26*)
+      SYStem.CPU TC26*
+
+    SYStem.CONFIG.DEBUGPORTTYPE DAP2
+    system.config.dap.USER1 SET HIGH 
+)
+;sys.cpu tc275te
+
+
+;Create new window for printing the SPI rx values.
+;AREA.Create OUT 
+;AREA.Select OUT
+;AREA.view OUT
+;WinClear OUTWIN
+
+; Wait for Power off
+wait !STATE.POWER()
+
+;Wait for power-ON
+wait STATE.POWER()
+
+sys.up
+break.select.PROGRAM ONCHIP
+;load target program and make required settings for target based programming
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Wait for ROT signal: Not required if polling just reset
+
+;wait (data.long(D:0xF003C024)&0x8)==0x0 //Wait until a high is over
+;wait (data.long(D:0xF003C024)&0x8)==0x8 //Wait until it goes high again for the next power-up cycle
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;SPI init and sending commands should happen here
+
+;SPI1_CLC = 0
+Data.Set D:0xF0001D00 %LONG 0x8
+
+
+;QSPI1_GLOBALCON.U = (0x4) | (0xF << 10)
+Data.Set D:0xF0001D10 %LONG 0x03C04
+
+;QSPI1_PISEL.U = 0
+;P10.01 RxSel A for QSPI1
+Data.Set D:0xF0001D04 %LONG 0x0
+
+;QSPI1_GLOBALCON1.U = (0x1 << 26) | (0x1 << 28)
+Data.Set D:0xF0001D14 %LONG 0x14000000
+
+;QSPI1_ECON1.U = ((1) | (0x1 << 8) | (0x1 << 10))
+Data.Set D:0xF0001D24 %LONG 0x501
+
+;QSPI1_SSOC.U = (0x1 << 26)
+;enable CS 9 
+Data.Set D:0xF0001D48 %LONG 0x02000000
+
+
+;Ports
+;P33.6=>output for signalling end of procedure. 
+;Pull it low 
+Data.Set D:0xF003D314 %LONG 0x00800000
+Data.Set D:0xF003D300 %LONG 0x00 
+
+;P10.01=>Input MRST
+;P10.02=>Output alt 3 SCL
+;P10.03=>Output alt 3 MTSR
+;P10_IOCR0   
+Data.Set D:0xF003B010 %LONG 0x98980000
+
+
+
+;Port 33 drive strength
+Data.Set D:0xF003B040 %LONG 0x0
+;Data.Set D:0xF003B044 %LONG 0x0
+
+
+;P10.5=>Output alt4 CS
+Data.Set D:0xF003B014 %LONG 0x0000A000
+;Drive strength
+Data.Set D:0xF003B040 %LONG 0x0
+
+
+
+;Make sure that flags in STATUS register are cleared 
+;while ((QSPI1_STATUS.U & 0xFFF) != 0)
+; QSPI1_FLAGSCLEAR.U = 0xFFF;
+WAIT (data.long(D:0xF0001D40)&0xFFF)==0x0
+Data.Set D:0xF0001D54 %LONG 0xFFF
+
+
+;QSPI1_BACONENTRY.U = 0x1 |(0x1 << 16) | (0x1 << 21 /*MSB first*/) | (0 << 22) | (0xF << 23) | (0x9 << 28 /*CS 9*/);
+Data.Set D:0xF0001D60 %LONG 0x97A10001
+
+;QSPI1_GLOBALCON.B.EN = 1;
+Data.Set D:0xF0001D10 %LONG (data.long(D:0xF0001D10)|0x01000000)
+
+
+;Write the spi words
+;{0x8756,0x87DE,0x86AD,0x8625,0x8D27,0x8811,0x87BE,0x8668,0x877D,0x8795};
+
+;GOSUB write_spi_word 0x0C00 //Read WDCFG0
+;GOSUB write_spi_word 0x0801 //Read SYSPCFG0
+
+GOSUB write_spi_word 0x8756
+GOSUB write_spi_word 0x87DE
+GOSUB write_spi_word 0x86AD
+GOSUB write_spi_word 0x8625
+GOSUB write_spi_word 0x8D27
+GOSUB write_spi_word 0x8811
+GOSUB write_spi_word 0x87BE
+GOSUB write_spi_word 0x8668
+GOSUB write_spi_word 0x877D
+GOSUB write_spi_word 0x8795
+
+;Now read back the WDCFG0 and SYSPCFG0 registers to confirm the switch off.
+GOSUB write_spi_word 0x0C00 //Read WDCFG0
+GOSUB write_spi_word 0x0801 //Read SYSPCFG0
+
+;Give a 50ms pulse on P33.6
+Data.Set D:0xF003D300 %LONG 0x40
+WAIT 50.ms
+Data.Set D:0xF003D300 %LONG 0x00
+
+
+
+ 
+ enddo
+
+
+
+write_spi_word:
+ ENTRY &spi_word
+ &rx_data=0
+ Data.Set D:0xF0001D64 %LONG &spi_word
+ WAIT (data.long(D:0xF0001D40)&0x200)==0x200
+ Data.Set D:0xF0001D54 %LONG 0x200
+
+ WAIT (data.long(D:0xF0001D40)&0x400)==0x400
+ Data.Set D:0xF0001D54 %LONG 0x400
+
+ &rx_data=data.long(D:0xF0001D90)
+ ;PRINT %Hex &rx_data ;may add to the delay.
+ RETURN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

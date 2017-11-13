@@ -1,0 +1,15 @@
+// T32_1000052 Thu Sep 06 09:33:51 2012
+
+ B::
+ 
+var.export halla.txt %open tbuTimeHallA
+var.export hallb.txt %open tbuTimeHallB
+var.export hallc.txt %open tbuTimeHallC
+var.export time.txt %open tbuTime
+var.export timeStamp.txt %open dpllTimeStamp
+var.export position.txt %open dpllPostion
+var.export timeStamp_New.txt %open dpllTimeStamp_new
+var.export timeStamp_old.txt %open dpllTimeStamp_old
+
+ 
+ ENDDO

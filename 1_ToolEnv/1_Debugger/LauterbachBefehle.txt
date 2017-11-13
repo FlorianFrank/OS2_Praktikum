@@ -1,0 +1,1 @@
+schreiben eines Arrays in ein Textfile:		var.export [filename] %open [format] "varname"

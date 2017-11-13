@@ -1,0 +1,104 @@
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 09/09/14, 09:17:02
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+
+Settings:
+  PortType:  DAS
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  10000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  y
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ImprovedInactiveAfterResetDetection:  y
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  n
+  HaltAfterReset:  n
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    Script is empty
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  n
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  10
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+

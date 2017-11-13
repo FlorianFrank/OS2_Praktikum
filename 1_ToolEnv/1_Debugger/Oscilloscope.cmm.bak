@@ -1,0 +1,478 @@
+;*****************************Dialog Counter************************************
+  LOCAL &MyInterval &MyLevel
+  ENTRY &MyInterval &MyLevel
+
+  print ""
+ WINPOS 10 10.0 80. 12. 16. 2. W001 NORMAL  "Oscilloscope setup"
+  dialog
+  (
+	header "Define Counter"
+
+;*****************************Definition***************************************
+        pos 30. 1. 10.
+        text "Trigger"
+        pos 30. 2. 10.
+TriggerSource:     PULLDOWN "Channel 1,Channel 2,Channel 3,Channel 4" "gosub subTriggerSource"        
+        pos 30. 3. 10.
+Edge.Rising:    CHOOSEBOX "Rising edge" "gosub subEdge"       
+        pos 40. 3. 10.
+Edge.Falling:    CHOOSEBOX "Falling edge" "gosub subEdge"       
+        pos 30. 4. 10.
+
+
+TriggerSingle:    CHECKBOX "Single" "gosub subTriggerSingle"       
+        pos 40. 4.
+        BUTTON "Re-start" "gosub subRun"
+        pos 30. 5. 10.
+
+TriggerAuto:    CHECKBOX "Auto" "gosub subTriggerAuto"       
+        BUTTON "Force Trig." "gosub subTriggerForce"
+
+        pos 1. 1. 10.
+Channel0:    CHECKBOX "Channel1" "gosub subChannels"       
+Channel1:    CHECKBOX "Channel2" "gosub subChannels"       
+Channel2:    CHECKBOX "Channel3" "gosub subChannels"       
+Channel3:    CHECKBOX "Channel4" "gosub subChannels"       
+
+        pos 13. 1. 10.        
+Channel0S:     PULLDOWN ",Speed,Iq,Vdc,Iu,Iv,Position" "gosub subChannel0Select"        
+Channel1S:     PULLDOWN ",Speed,Iq,Vdc,Iu,Iv,Position" "gosub subChannel1Select"        
+Channel2S:     PULLDOWN ",Speed,Iq,Vdc,Iu,Iv,Position" "gosub subChannel2Select"        
+Channel3S:     PULLDOWN ",Speed,Iq,Vdc,Iu,Iv,Position" "gosub subChannel3Select"        
+
+
+
+        pos 30. 7. 5.
+        text "Level"
+        pos 35. 7. 15. 1.
+Level:     EDIT "" "gosub subLevel"
+
+        pos 50. 1. 10.
+        text "Interval"
+        pos 60. 1. 15. 1.
+Interval:     EDIT "" "gosub subInterval"
+
+        pos 30. 10. 7.
+        BUTTON "Reset" "gosub InitDialogAddr"
+        pos 60. 10. 6.
+        DEFBUTTON "Close" "jumpto wincloseC"
+;        DEFBUTTON "OK" "jumpto wincloseC"
+        pos 70. 10. 6.
+        DEFBUTTON "Ok" ""
+        CLOSE "jumpto wincloseC"
+  )        
+  gosub InitDialogAddr
+  stop
+
+wincloseC:
+  dialog.end
+enddo
+
+InitDialogAddr:
+  dialog.set TriggerSource "Channel 1"
+	gosub subTriggerSource
+  dialog.set TriggerSingle "0"
+	gosub subTriggerSingle
+  dialog.set TriggerAuto ""
+	gosub subTriggerAuto
+  dialog.set Edge.Rising ""
+	gosub subEdge
+
+  dialog.set Channel0 "0"
+  dialog.set Channel1 "0"
+  dialog.set Channel2 "0"
+  dialog.set Channel3 "0"
+	gosub subChannels
+
+  dialog.set Interval "0"
+	gosub subInterval
+  dialog.set Level "0"
+	gosub subLevel
+
+  dialog.set Channel0S ""
+	gosub subChannel0Select
+  dialog.set Channel1S ""
+	gosub subChannel1Select
+  dialog.set Channel2S ""
+	gosub subChannel2Select
+  dialog.set Channel3S ""
+	gosub subChannel3Select
+
+  RETURN
+
+
+
+subRun:
+	V %e System.Oscilloscope.Trigger.Enabled = 1
+  RETURN
+
+subEdge:
+	if dialog.boolean(Edge.Rising)
+		V %e g_Osci.trigger.risingEdge = 1
+	else
+		V %e g_Osci.trigger.risingEdge = 0
+  RETURN
+
+subTriggerAuto:
+	if dialog.boolean(TriggerAuto)
+	(
+		V %e g_Osci.trigger.enabled = 0
+		V %e g_Osci.trigger.automatic = 1
+	)
+	else
+	(
+		V %e g_Osci.trigger.automatic = 0
+		V %e g_Osci.trigger.enabled = 1
+	)
+  RETURN
+  
+subTriggerSource:
+    local &MySelection
+    ENTRY &MySelection
+
+    &MySelection=dialog.string(TriggerSource)
+	if ("&MySelection"=="Channel 1")
+	(
+		V %e g_Osci.trigger.source = 0
+	)
+	else if ("&MySelection"=="Channel 2")
+	(
+		V %e g_Osci.trigger.source = 1
+	)
+	else if ("&MySelection"=="Channel 3")
+	(
+		V %e g_Osci.trigger.source = 2
+	)
+	else if ("&MySelection"=="Channel 4")
+	(
+		V %e g_Osci.trigger.source = 3
+	)
+
+
+  RETURN  
+
+
+subTriggerSingle:
+	if dialog.boolean(TriggerSingle)
+		V %e g_Osci.trigger.single = 1
+	else
+	(
+		V %e g_Osci.trigger.single = 0
+		V %e g_Osci.trigger.enabled = 1
+	)
+  RETURN  
+
+subTriggerForce:
+		V %e g_Osci.trigger.force = 1
+  RETURN  
+
+subInterval:
+    &MyInterval=dialog.string(Interval)
+    if "&MyInterval"!=""
+    (
+		V %e g_Osci.trigger.interval = &MyInterval
+    )
+  RETURN
+
+subLevel:
+    &MyLevel=dialog.string(Level)
+    if "&MyLevel"!=""
+    (
+		V %e g_Osci.trigger.level = &MyLevel
+    )
+  RETURN
+
+
+subChannel0Select:
+    local &MySelection
+    ENTRY &MySelection
+
+    &MySelection=dialog.string(Channel0S)
+	if ("&MySelection"=="")
+	(
+		V %e g_Osci.channels[0].source = 0
+	)
+	else if ("&MySelection"=="Speed")
+	(
+		V %e g_Osci.channels[0].source = &g_motor->position.speed
+		V %e g_Osci.channels[0].type = 1
+		V %e g_Osci.channels[0].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iq")
+	(
+		V %e g_Osci.channels[0].source = &g_motor.control.foc.nfo_mdq.imag
+		V %e g_Osci.channels[0].type = 1
+		V %e g_Osci.channels[0].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Vdc")
+	(
+		V %e g_Osci.channels[0].source = &g_motor.analogInputs.vdc->value
+		V %e g_Osci.channels[0].type = 1
+		V %e g_Osci.channels[0].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iu")
+	(
+		V %e g_Osci.channels[0].source = &g_motor.currents.u
+		V %e g_Osci.channels[0].type = 1
+		V %e g_Osci.channels[0].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iv")
+	(
+		V %e g_Osci.channels[0].source = &g_motor.currents.v
+		V %e g_Osci.channels[0].type = 1
+		V %e g_Osci.channels[0].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Position")
+	(
+		V %e g_Osci.channels[0].source = &g_motor->position.position
+		V %e g_Osci.channels[0].type = 2
+		V %e g_Osci.channels[0].QFormatShift = 0
+	)
+ RETURN
+subChannel1Select:
+    local &MySelection
+    ENTRY &MySelection
+
+    &MySelection=dialog.string(Channel1S)
+	if ("&MySelection"=="")
+	(
+		V %e g_Osci.channels[1].source = 0
+	)
+	else if ("&MySelection"=="Speed")
+	(
+		V %e g_Osci.channels[1].source = &g_motor->position.speed
+		V %e g_Osci.channels[1].type = 1
+		V %e g_Osci.channels[1].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iq")
+	(
+		V %e g_Osci.channels[1].source = &g_motor.control.foc.nfo_mdq.imag
+		V %e g_Osci.channels[1].type = 1
+		V %e g_Osci.channels[1].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Vdc")
+	(
+		V %e g_Osci.channels[1].source = &g_motor.analogInputs.vdc->value
+		V %e g_Osci.channels[1].type = 1
+		V %e g_Osci.channels[1].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iu")
+	(
+		V %e g_Osci.channels[1].source = &g_motor.currents.u
+		V %e g_Osci.channels[1].type = 1
+		V %e g_Osci.channels[1].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iv")
+	(
+		V %e g_Osci.channels[1].source = &g_motor.currents.v
+		V %e g_Osci.channels[1].type = 1
+		V %e g_Osci.channels[1].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Position")
+	(
+		V %e g_Osci.channels[1].source = &g_motor->position.position
+		V %e g_Osci.channels[1].type = 2
+		V %e g_Osci.channels[1].QFormatShift = 0
+	)
+  RETURN
+subChannel2Select:
+    local &MySelection
+    ENTRY &MySelection
+
+    &MySelection=dialog.string(Channel2S)
+	if ("&MySelection"=="")
+	(
+		V %e g_Osci.channels[2].source = 0
+	)
+	else if ("&MySelection"=="Speed")
+	(
+		V %e g_Osci.channels[2].source = &g_motor->position.speed
+		V %e g_Osci.channels[2].type = 1
+		V %e g_Osci.channels[2].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iq")
+	(
+		V %e g_Osci.channels[2].source = &g_motor.control.foc.nfo_mdq.imag
+		V %e g_Osci.channels[2].type = 1
+		V %e g_Osci.channels[2].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Vdc")
+	(
+		V %e g_Osci.channels[2].source = &g_appVadc_kernel.channel[0].value
+		V %e g_Osci.channels[2].type = 1
+		V %e g_Osci.channels[2].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iu")
+	(
+		V %e g_Osci.channels[2].source = &g_motor.currents.u
+		V %e g_Osci.channels[2].type = 1
+		V %e g_Osci.channels[2].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iv")
+	(
+		V %e g_Osci.channels[2].source = &g_motor.currents.v
+		V %e g_Osci.channels[2].type = 1
+		V %e g_Osci.channels[2].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Position")
+	(
+		V %e g_Osci.channels[2].source = &g_motor->position.position
+		V %e g_Osci.channels[2].type = 2
+		V %e g_Osci.channels[2].QFormatShift = 0
+	)
+  RETURN
+subChannel3Select:
+    local &MySelection
+    ENTRY &MySelection
+
+    &MySelection=dialog.string(Channel3S)
+	if ("&MySelection"=="")
+	(
+		V %e g_Osci.channels[3].source = 0
+	)
+	else if ("&MySelection"=="Speed")
+	(
+		V %e g_Osci.channels[3].source = &g_motor->position.speed
+		V %e g_Osci.channels[3].type = 1
+		V %e g_Osci.channels[3].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iq")
+	(
+		V %e g_Osci.channels[3].source = &g_motor.control.foc.nfo_mdq.imag
+		V %e g_Osci.channels[3].type = 1
+		V %e g_Osci.channels[3].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Vdc")
+	(
+		V %e g_Osci.channels[3].source = &g_motor.analogInputs.vdc->value
+		V %e g_Osci.channels[3].type = 1
+		V %e g_Osci.channels[3].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iu")
+	(
+		V %e g_Osci.channels[3].source = &g_motor.currents.u
+		V %e g_Osci.channels[3].type = 1
+		V %e g_Osci.channels[3].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Iv")
+	(
+		V %e g_Osci.channels[3].source = &g_motor.currents.v
+		V %e g_Osci.channels[3].type = 1
+		V %e g_Osci.channels[3].QFormatShift = 0
+	)
+	else if ("&MySelection"=="Position")
+	(
+		V %e g_Osci.channels[3].source = &g_motor->position.position
+		V %e g_Osci.channels[3].type = 2
+		V %e g_Osci.channels[3].QFormatShift = 0
+	)
+  RETURN
+
+
+subChannels:
+	WINCLEAR W003
+	WINPOS 84.714 44.0 80. 22. 16. 2. W003 NORMAL  "Channels"
+	if (dialog.boolean(Channel3))
+	(
+		if (dialog.boolean(Channel2))
+		(
+			if (dialog.boolean(Channel1))
+			(
+				if (dialog.boolean(Channel0))
+				(
+					; 1111
+					V.DRAW %e g_OsciValues[3] g_OsciValues[2] g_OsciValues[1] g_OsciValues[0]
+				)
+				else
+				(
+					; 1110
+					V.DRAW %e g_OsciValues[3] g_OsciValues[2] g_OsciValues[1]
+				)
+			)
+			else if (dialog.boolean(Channel0))
+			(
+					; 1101
+					V.DRAW %e g_OsciValues[3] g_OsciValues[2] g_OsciValues[0]
+			)
+			else
+			(
+					; 1100
+					V.DRAW %e g_OsciValues[3] g_OsciValues[2]
+			)
+		)
+		else if (dialog.boolean(Channel1))
+		(
+			if (dialog.boolean(Channel0))
+			(
+					; 1011
+					V.DRAW %e g_OsciValues[3] g_OsciValues[1] g_OsciValues[0]
+			)
+			else
+			(
+					; 1010
+					V.DRAW %e g_OsciValues[3] g_OsciValues[1]
+			)
+		)
+		else if (dialog.boolean(Channel0))
+		(
+					; 1001
+					V.DRAW %e g_OsciValues[3]  g_OsciValues[0]
+		)
+		else
+		(
+					; 1000
+					V.DRAW %e g_OsciValues[3]
+		)
+	)
+	else if (dialog.boolean(Channel2))
+	(
+		if (dialog.boolean(Channel1))
+		(
+			if (dialog.boolean(Channel0))
+			(
+					; 0111
+					V.DRAW %e g_OsciValues[2] g_OsciValues[1] g_OsciValues[0]
+			)
+			else
+			(
+					; 0110
+					V.DRAW %e g_OsciValues[2] g_OsciValues[1]
+			)
+		)
+		else if (dialog.boolean(Channel0))
+		(
+					; 0101
+					V.DRAW %e g_OsciValues[2] g_OsciValues[0]
+		)
+		else
+		(
+					; 0100
+					V.DRAW %e g_OsciValues[2]
+		)
+	)
+	else if (dialog.boolean(Channel1))
+	(
+		if (dialog.boolean(Channel0))
+		(
+					; 0011
+					V.DRAW %e g_OsciValues[1] g_OsciValues[0]
+		)
+		else
+		(
+					; 0010
+					V.DRAW %e g_OsciValues[1]
+		)
+	)
+	else if (dialog.boolean(Channel0))
+	(
+					; 0001
+					V.DRAW %e g_OsciValues[0]
+	)
+	else
+	(
+					; 0000
+	)
+  RETURN  
+
+
+

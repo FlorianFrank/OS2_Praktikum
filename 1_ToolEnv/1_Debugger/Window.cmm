@@ -1,0 +1,37 @@
+// T32_1000001 Wed Jul 19 09:40:02 2017
+
+ B::
+ 
+ TOOLBAR ON
+ STATUSBAR ON
+ FramePOS 14.286,8.3333,,,Maximized
+ WinPAGE.RESet
+ 
+ WinPAGE.Create P000
+ WinCLEAR
+ 
+ WinPOS 0.42857 31.75 80. 25. 0. 0. W003
+ per C:\T32_Tricore\pertc27x.per /DUALPORT /SPOTLIGHT 
+ WinPAN 0. 17.
+ 
+ WinPOS 6.4286 3.75 113. 26. 13. 1. W005
+ WinTABS 10. 10. 25. 62.
+ List core0_main
+ 
+ WinPOS 38.143 47.583 38. 16. 0. 0. W007
+ SYStem
+ 
+ WinPOS 95.429 37.167 122. 25. 13. 1. W000
+ WinTABS 10. 10. 25. 62.
+ Data.List
+ 
+ WinPOS 165.43 3.0833 106. 58. 0. 0. W001
+ Var.Watch system
+ 
+ VAR.ADDWATCH g_Lb
+ VAR.ADDWATCH Ifx_OSTask_1ms_Count
+ VAR.ADDWATCH Ifx_OSTask_5ms_Count
+ 
+ WinPAGE.select P000
+ 
+ ENDDO

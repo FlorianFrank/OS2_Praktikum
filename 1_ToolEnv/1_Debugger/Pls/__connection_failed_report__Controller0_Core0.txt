@@ -1,0 +1,7977 @@
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.10.4
+  created: 09/27/12, 09:54:38
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  3.03.05
+  Build:    2517
+  Path:     C:\Program Files\pls\UDE 4.0
+
+Target configuration file:
+  C:\Users\Public\Documents\pls\UDE 4.0\Targets\TriBoard_TC275_singlecore.cfg
+
+Error messages:
+  McdTargIntf: Can't connect target !
+
+Setup:
+  McdDllPath:  mcdxdas.dll
+  HostName:  localhost
+  ServerName:  UDAS
+  SystemKey:  
+  RunningOnly:  n
+  PrjPath:  
+  GetPrjPathFromFile:  
+  McdCore:  
+  McdCoreType:  0xFFFFFFFF
+  McdCoreId:  4294967295
+  MemSpaceName:  
+  MemSpaceId:  -1
+  RegSpaceName:  
+  RegSpaceId:  0
+  RstVector:  0x00000000
+  ConnOption:  Default
+  LoadElfFromSim:  n
+  HandleInactiveAfterReset:  n
+  ForceInactiveAfterReset:  n
+  BlockReset:  n
+  BlockFlashAccess:  n
+  ResetWaitTime:  0
+  BrpAddrRangeBugfix:  n
+  StepAfterConnect:  n
+  DontTouchLcxReg:  n
+  FakePcValue:  0xFFFFFFFF
+
+Info:
+  PublicName:  Controller0.Core0
+  ArchType:  3
+  Architecture:  TriCore
+  IsMaster:  y
+  RegsBaseAddr:  0xF8810000
+  CoreIndex:  0
+  McdServer:  
+  McdAccHw:  
+  McdSystem:  
+  McdSystemInstance:  
+  PrjPath:  
+  McdDevice:  
+  McdDeviceType:  0xFFFFFFFF
+  McdDeviceId:  4294967295
+  McdCore:  
+  McdCoreType:  0xFFFFFFFF
+  McdCoreId:  4294967295
+  InactiveAfterReset:  n
+  StartInactiveCoreDone:  n
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 07:56:22
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: No JTAG client found !
+Please check:
+- target power supply
+- JTAG cable connection
+- target configuration
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC000
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF0000420
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           879
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 07:56:40
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: No JTAG client found !
+Please check:
+- target power supply
+- JTAG cable connection
+- target configuration
+  UDEDebugServer: Unable to establish connection . To correct the situation, check configuration file entries and try again.
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC000
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 08:05:18
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: No JTAG client found !
+Please check:
+- target power supply
+- JTAG cable connection
+- target configuration
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        1.2 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC000
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF883FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 08:07:09
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC27xB_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: That's the wrong target type !
+Please check target configuration !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0x801C
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF000047C
+  IOINFO:                 0x00000400
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           1453
+  ProtErrorLine:          4597
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 08:07:17
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC27xB_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: That's the wrong target type !
+Please check target configuration !
+  UDEDebugServer: Unable to establish connection . To correct the situation, check configuration file entries and try again.
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0x801C
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF000047C
+  IOINFO:                 0x00000400
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           1453
+  ProtErrorLine:          4597
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 08:07:21
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC27xB_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: That's the wrong target type !
+Please check target configuration !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0x801C
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF000047C
+  IOINFO:                 0x00000400
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           1453
+  ProtErrorLine:          4597
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 08:09:24
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to set OJCONF register !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        1.2 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC021
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF0000480
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4379
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/07/14, 08:11:18
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Connection to target lost !
+  Tc2CoreTargIntf: Read memory block 0xA0000020-0xA000041F failed !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0473
+  LastResult:   0xC002
+  ExpBytes:     1024 (0x0400)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF0000480
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4379
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:37:42
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.5 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:37:48
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:38:14
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.7 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:38:16
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.5 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:39:00
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.7 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:39:02
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.7 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:39:21
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.7 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:40:17
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+  UDEDebugServer: Unable to establish connection . To correct the situation, check configuration file entries and try again.
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.7 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:40:42
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  n
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:40:43
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  n
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:41:12
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  n
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:42:30
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  n
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.5 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:43:20
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  n
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Break
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  6000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:43:51
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  n
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Break
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Block
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  6000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:44:53
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.6 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:45:36
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Failed to open JTAG port !
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  0
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       -1520805211 kHz
+  ExtVoltage:        14.7 V
+  IntVoltageUsed:    y
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC01E
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0000
+  LastSupervisorJioError: 0x0000
+  JioErrorLine:           0
+  ProtErrorLine:          880
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 08:54:06
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: No JTAG client found !
+Please check:
+- target power supply
+- JTAG cable connection
+- target configuration
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        1.2 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC000
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0x00000000
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           0
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:35:56
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:36:12
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:36:25
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  Default
+  CommDevSel:  
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:36:46
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:36:47
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:36:51
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+  UDEDebugServer: Unable to establish connection . To correct the situation, check configuration file entries and try again.
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:36:53
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:07
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:22
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:24
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:26
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:26
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:27
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:55
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:37:57
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:38:05
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:38:07
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:40:06
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: No JTAG client found !
+Please check:
+- target power supply
+- JTAG cable connection
+- target configuration
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC000
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF0000420
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           879
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 10:40:18
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: No JTAG client found !
+Please check:
+- target power supply
+- JTAG cable connection
+- target configuration
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0410
+  LastResult:   0xC000
+  ExpBytes:     224 (0x00E0)
+  RetBytes:     224 (0x00E0)
+  LastTimeout:  12000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:01:34
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+  UDEDebugServer: UAD2 - serial no. 200239 was suprised removed . To correct the situation, connect the communication device again and try to establish target communication.
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:01:42
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:01:44
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:02:01
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:02:05
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:02:09
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:02:31
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 08/18/14, 13:02:32
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x101E8083
+  UsedJtagClk:       5000 kHz
+  ExtVoltage:        3.3 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  UAD2
+  Serial Number:  200239
+  Firmware:       3.9.21.10502
+
+Communication protocol handler:
+  LastCmd:      0x0411
+  LastResult:   0x0001
+  ExpBytes:     208 (0x00D0)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  5000
+
+Protocol diagnostic output:
+  LastAddr:               0xF881FD00
+  IOINFO:                 0x00000000
+  LastJioError:           0x0002
+  LastSupervisorJioError: 0x0002
+  JioErrorLine:           1453
+  ProtErrorLine:          4120
+  AddInfo4:               0 (0x00000000)
+  AddInfo5:               0 (0x00000000)
+
+
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Basic UDE Target Interface, Version: 1.11.5
+  created: 09/09/14, 09:15:59
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  4.02.03
+  Build:    10502
+  Path:     C:\Program Files\pls\UDE 4.2
+
+Target configuration file:
+  \\mucsdn31.eu.infineon.com\scheffer\My documents\pls\UDE 4.2\Targets\TriBoard_TC26x_dap.cfg
+
+Error messages:
+  Tc2CoreTargIntf: Can't connect target !
+  Tc2CoreTargIntf: Can't connect JTAG target
+  Tc2CoreTargIntf: Can't open communication channel
+  UAD2CommDev: Can't connect Universal Access Device 2 !
+Please check:
+- Power supply of UAD2
+- Communication cable to UAD2
+
+Settings:
+  PortType:  CommDev
+  CommDevSel:  PortType=USB,Type=UAD2
+  TargetPort:  Default
+  TargetPortId:  553582592
+  DasIsDefault:  n
+  MaxJtagClk:  5000
+  CheckJtagId:  y
+  ScanJTAG:  n
+  Ocds1ViaPod:  n
+  EtksArbiterMode:  None
+  RefreshJtag:  n
+  RefreshHarr:  n
+  ReenableOcds:  n
+  ReduceJtagClock:  n
+  UseDap:  y
+  DapMode:  2PIN
+  JtagMuxPort:  -1
+  UseNewJtagEngine:  y
+  ConnOption:  Default
+  DontSaveConnOptionInCfgFile:  n
+  ResetWaitTime:  500
+  ResetMode:  Default
+  OpenDrainReset:  n
+  DiswdtOnReset:  n
+  SetPllOnReset:  0x00000000
+  SetPllOnReset2:  0x00000000
+  ExecInitCmds:  y
+  InitScript Script:
+    SET 0xF80020A8 0x8000
+    SET 0xF80020AC 0x8000
+    
+  ExecOnConnectCmds:  n
+  OnConnectScript Script:
+    Script is empty
+  FailOnResetMalfunction:  n
+  ResetPulseLen:  10
+  AddResetDelay:  0
+  UseTrstOnReset:  n
+  ExecEmemInitOnReset:  0x00000000
+  SimHsmBootEnabled:  n
+  UnlockInterface:  n
+  BootPasswd0:  0x00000000
+  BootPasswd1:  0x00000000
+  BootPasswd2:  0x00000000
+  BootPasswd3:  0x00000000
+  BootPasswd4:  0x00000000
+  BootPasswd5:  0x00000000
+  BootPasswd6:  0x00000000
+  BootPasswd7:  0x00000000
+  MaxTry:  1
+  UseTranslateAddr:  y
+  DownloadToAllRams:  y
+  HaltAfterReset:  y
+  SimioAddr:  g_JtagSimioAccess
+  UseStmForPtm:  1
+  ExecOnStartCmds:  n
+  OnStartScript Script:
+    
+  ExecOnHaltCmds:  n
+  OnHaltScript Script:
+    
+  UseTriggerToBreak:  y
+  UseIoinfoHalt:  y
+  UseOstateStable:  y
+  AllowJtagResetWhileRunning:  y
+  MaxAccRetry:  1
+  AccRetryDelay:  100
+  DefOcdsReserved:  
+  UseRestartWhileRunningHandling:  n
+  DebugResetOnDisconnect:  n
+  IgnoreEmemAccessErrors:  n
+  RemapEmemAccess:  n
+  EnableAutomaticHsmStart:  n
+  EnableAutomaticHsmRunControl:  n
+  IvIcacheOnHalt:  y
+  IvPlbOnHalt:  y
+  SuspendSlaveCores:  n
+  FilterMemAcc:  y
+  DasDllPath:  das_api.dll
+  DasHost:  
+  DasTryStartSrv:  y
+  DasSrvPath:  servers\udas\udas.exe
+  DasStopSrv:  y
+  DasResetHelperBreakAddr:  main
+  DasResetMode:  2
+  DasRemoveLogFile:  n
+  DasForwardSerNum:  n
+  DasSrvSel:  -1
+  DasPortType:  0
+  DasPortSel:  0
+
+JTAG target infos:
+  JTAG-ID:           0x00000000
+  UsedJtagClk:       0 MHz
+  ExtVoltage:        0.0 V
+  IntVoltageUsed:    n
+  STSTAT:            0x2418E384
+
+Component Version: 1.0.8.10502
+
+Communication device:
+  Type/Revision:  
+  Serial Number:  0
+  Firmware:       
+
+Communication protocol handler:
+  LastCmd:      0x0000
+  LastResult:   0x0000
+  ExpBytes:     0 (0x0000)
+  RetBytes:     0 (0x0000)
+  LastTimeout:  0
+
+Protocol diagnostic output:
+  Diagnostic output invalid !
+
+

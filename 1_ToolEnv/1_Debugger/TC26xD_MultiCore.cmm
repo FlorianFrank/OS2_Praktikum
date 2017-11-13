@@ -1,0 +1,131 @@
+; Script file for TC2D5 on TRIBOARD-TC275A
+;
+; Initializes the TriCore and opens AMP demo.
+;
+;
+; $LastChangedDate: 2011-12-05 10:44:38 +0100 (Mo, 05 Dez 2011) $
+; $LastChangedRevision: 4394 $
+; $LastChangedBy: mobermeir $
+;
+;
+; Memory mappings:
+; tbd.
+; Notes:
+; - Start three TriCore GUIs with intercom enabled
+; - Run this script from the first GUI
+; - Place your application the same directory and rename it to
+;   MyApplication.elf
+; - Flash your application with 
+;   DO ~~/demo/tricore/flash/tc275.cmm
+
+
+;========================================================================
+; intercom setup:
+
+; intercom address:
+&addressGUI0="127.0.0.1:"+FORMAT.DECIMAL(1.,INTERCOM.PORT())
+&addressGUI1="127.0.0.1:"+FORMAT.DECIMAL(1.,INTERCOM.PORT()+1)
+&addressGUI2="127.0.0.1:"+FORMAT.DECIMAL(1.,INTERCOM.PORT()+2)
+
+&core0="" ;only to inprove readability ("INTERCOM.execute &addressGUI0")
+&core1="INTERCOM.execute &addressGUI1"
+&core2="INTERCOM.execute &addressGUI2"
+
+&coreAll="GOSUB intercom_all "
+
+; check if all GUIs are started
+WAIT INTERCOM.PING(&addressGUI1) 5.s
+IF !INTERCOM.PING(&addressGUI1)
+(
+    PRINT %ERROR "no debugger / GUI at &addressGUI1 "
+    ENDDO
+)
+WAIT INTERCOM.PING(&addressGUI2) 5.s
+IF !INTERCOM.PING(&addressGUI2)
+(
+    PRINT %ERROR "no debugger / GUI at &addressGUI1 "
+    ENDDO
+)
+PRINT "all debuggers / GUIs detected"
+
+;========================================================================
+; initialize and start the debugger
+
+  &coreAll RESet
+  ;&coreAll System.config.INTERFACE DAP2
+  ;&coreAll system.CONFIG.dap USER1 SET HIGH 
+	System.config.INTERFACE DAP2
+	system.CONFIG.dap USER1 SET HIGH 
+
+  &coreAll SYStem.CPU TC277T
+  System.config.INTERFACE DAP2
+  system.CONFIG.dap USER1 SET HIGH 
+
+  ; mount all cores into the same chip
+  &core0 SYStem.CONFIG CORE 1. 1.
+  &core1 SYStem.CONFIG CORE 2. 1.
+  &core2 SYStem.CONFIG CORE 3. 1.
+
+
+  ;&core0 SYStem.Up
+  &core0 SYStem.Mode Up
+  &core1 SYStem.Mode Attach
+  &core2 SYStem.Mode Attach
+
+  ; optional settings:
+  &coreAll SYStem.Option DUALPORT ON
+  &coreAll SETUP.VAR %SpotLight
+
+;========================================================================
+; Memory initialzation
+; initialize external bus unit
+; tbd.
+
+;========================================================================
+; Load elf file (assuming it is flashed already)
+
+
+  ;&core0 Data.LOAD.Elf ..\..\2_Out\Gnuc\BaseFramework_TC26xB_Tricore.elf /NOCODE
+  ;&core1 Data.LOAD.Elf ..\..\2_Out\Gnuc\BaseFramework_TC26xB_Tricore.elf /NOCODE /NOREG
+  &core0 Data.LOAD.Elf C:\Project\002_BMW\Temp\exd_download_erika\BaseFramework_TC26xB\DR_BaseFramework_TC26xB\2_Out\Gnuc\DR_BaseFramework_TC26xB_Tricore.elf /NOCODE
+  &core1 Data.LOAD.Elf C:\Project\002_BMW\Temp\exd_download_erika\BaseFramework_TC26xB\DR_BaseFramework_TC26xB\2_Out\Gnuc\DR_BaseFramework_TC26xB_Tricore.elf /NOCODE /NOREG
+  &core2 Data.LOAD.Elf C:\Project\002_BMW\Temp\exd_download_erika\BaseFramework_TC26xB\DR_BaseFramework_TC26xB\2_Out\Gnuc\DR_BaseFramework_TC26xB_Tricore.elf /NOCODE /NOREG
+
+  ; arrange GUIs and open some windows
+  &core0 FramePOS 0% 0% 50% 75%
+  &core1 FramePOS 50% 0% 50% 75%
+ &core2 FramePOS 50% 0% 50% 75%
+
+ ; &coreAll WINCLEAR
+ ; &coreAll WINPOS 0% 0% 100% 33%
+ ; &coreAll AREA
+ ; &coreAll WINPOS 0% 33% 100% 33%
+ ; &coreAll Data.List
+ ; &coreAll WINPOS 0% 66% 100% 33%
+  &coreAll SYnch
+
+  ;set up SYnch
+  &core0 SYnch.Connect &addressGUI0 
+  &core1 SYnch.Connect &addressGUI1 
+&core2 SYnch.Connect &addressGUI2 
+  
+  &core0 SYnch.MasterGo ON
+  &core0 SYnch.MasterBreak ON
+  &core1 SYnch.SlaveGo ON
+  &core1 SYnch.SlaveBreak ON
+ &core2 SYnch.SlaveGo ON
+  &core2 SYnch.SlaveBreak ON
+
+ENDDO
+
+;========================================================================
+; helper subroutine:
+intercom_all:
+(
+  LOCAL &params
+  ENTRY %Line &params
+  &core0 &params
+  &core1 &params
+  &core2 &params
+  RETURN
+)

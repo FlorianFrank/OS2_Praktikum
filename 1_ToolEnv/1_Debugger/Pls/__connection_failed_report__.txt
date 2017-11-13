@@ -1,0 +1,23 @@
+----------------------------------------------------------
+
+  Connection Failed Report from
+  Target Interface for fv66 Monitor DLLs, Version: 1.9.0
+  created: 09/25/12, 14:29:04
+
+----------------------------------------------------------
+
+Windows version:
+  Win7 (Service Pack 1)
+  Admin: yes
+
+UDE version:
+  Release:  3.03.03
+  Build:    2510
+  Path:     C:\Program Files\pls\UDE 4.0
+
+Target configuration file:
+  C:\Users\Public\Documents\pls\UDE 4.0\Targets\fastpc6x.CFG
+
+Error messages:
+  Fv66TargIntf: Can't connect target !
+  Fv66TargIntf: Failed to open fast-PC6x driver !

@@ -1,0 +1,10 @@
+#UDE_ParserNotation_2
+#a little help, the Keywords
+#MSGID It will display the CAN-ID of this Message. The parameter for output can be %d or %X
+#TIMESTAMP It will display the Timestamp of this Message. The parameter for output can be %d
+#STDMSGID It will display the normal CANopen specify ID of this Message. The parameter for output can be %s
+#BITVALUE(x,x) It will display the specify bits of data in this Message. The parameter for output can be %d or %X
+#Example:
+#391 , " Node 7  digital 8 bit output %d " ,   BITVALUE(0,7)
+#a little help end
+

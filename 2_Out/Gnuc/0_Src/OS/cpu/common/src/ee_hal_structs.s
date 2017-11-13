@@ -1,0 +1,341 @@
+	.file	"ee_hal_structs.c"
+.section .text,"ax",@progbits
+.Ltext0:
+	.global	EE_std_endcycle_next_tid
+.section .bss,"aw",@nobits
+	.align 2
+	.type	EE_std_endcycle_next_tid, @object
+	.size	EE_std_endcycle_next_tid, 4
+EE_std_endcycle_next_tid:
+	.zero	4
+	.global	EE_IRQ_nesting_level
+	.align 2
+	.type	EE_IRQ_nesting_level, @object
+	.size	EE_IRQ_nesting_level, 4
+EE_IRQ_nesting_level:
+	.zero	4
+.section .text,"ax",@progbits
+.Letext0:
+	.file 1 "./0_Src/OS/cpu/common/inc/ee_types.h"
+	.file 2 "./0_Src/OS/cpu/tricore/inc/ee_tc_cpu.h"
+	.file 3 "./0_Src/OS/cpu/common/inc/ee_hal_structs.h"
+	.file 4 "0_Src/OS/cpu/common/src/ee_hal_structs.c"
+	.file 5 "./0_Src/OS/cpu/tricore/inc/ee_tc_internal.h"
+	.file 6 "./0_Src/OS/kernel/oo/inc/ee_common.h"
+	.file 7 "./0_Src/OS/kernel/oo/inc/ee_intfunc.h"
+.section .debug_info,"",@progbits
+.Ldebug_info0:
+	.uaword	0x3d8
+	.uahalf	0x3
+	.uaword	.Ldebug_abbrev0
+	.byte	0x4
+	.uleb128 0x1
+	.ascii	"GNU C 4.9."
+	.string	"4 build on 2017-01-30 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.1.0-infineon-1.1\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -msmall-const=8 -mtc161 -g -g -O2 -fno-common -fno-short-enums -fsingle-precision-constant -fstrict-volatile-bitfields"
+	.byte	0x1
+	.string	"0_Src/OS/cpu/common/src/ee_hal_structs.c"
+	.string	"C:\\\\betriebssys\\\\BaseFramework_TC26xB"
+	.uaword	.Ldebug_line0
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x8
+	.string	"unsigned char"
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x6
+	.string	"signed char"
+	.uleb128 0x2
+	.byte	0x2
+	.byte	0x5
+	.string	"short int"
+	.uleb128 0x2
+	.byte	0x2
+	.byte	0x7
+	.string	"short unsigned int"
+	.uleb128 0x3
+	.string	"EE_INT32"
+	.byte	0x1
+	.byte	0x4b
+	.uaword	0x1be
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x5
+	.string	"int"
+	.uleb128 0x3
+	.string	"EE_UINT32"
+	.byte	0x1
+	.byte	0x4c
+	.uaword	0x1d6
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.string	"unsigned int"
+	.uleb128 0x3
+	.string	"EE_UREG"
+	.byte	0x2
+	.byte	0x7b
+	.uaword	0x1c5
+	.uleb128 0x3
+	.string	"EE_FREG"
+	.byte	0x2
+	.byte	0x7d
+	.uaword	0x1c5
+	.uleb128 0x3
+	.string	"EE_TID"
+	.byte	0x2
+	.byte	0x80
+	.uaword	0x1ae
+	.uleb128 0x4
+	.uaword	0x1e6
+	.uaword	0x21d
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x6
+	.string	"EE_std_thread_tos"
+	.byte	0x3
+	.byte	0x5d
+	.uaword	0x238
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x7
+	.uaword	0x212
+	.uleb128 0x8
+	.string	"EE_IRQ_nesting_level"
+	.byte	0x4
+	.byte	0x34
+	.uaword	0x1e6
+	.byte	0x1
+	.byte	0x5
+	.byte	0x3
+	.uaword	EE_IRQ_nesting_level
+	.uleb128 0x6
+	.string	"EE_tc_active_tos"
+	.byte	0x5
+	.byte	0xbe
+	.uaword	0x1e6
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x8
+	.string	"EE_std_endcycle_next_tid"
+	.byte	0x4
+	.byte	0x39
+	.uaword	0x204
+	.byte	0x1
+	.byte	0x5
+	.byte	0x3
+	.uaword	EE_std_endcycle_next_tid
+	.uleb128 0x6
+	.string	"EE_th_status"
+	.byte	0x6
+	.byte	0xa6
+	.uaword	0x212
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x4
+	.uaword	0x204
+	.uaword	0x2c2
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x6
+	.string	"EE_th_next"
+	.byte	0x6
+	.byte	0xae
+	.uaword	0x2b7
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x6
+	.string	"EE_th_ready_prio"
+	.byte	0x6
+	.byte	0xb1
+	.uaword	0x2f0
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x7
+	.uaword	0x212
+	.uleb128 0x6
+	.string	"EE_th_dispatch_prio"
+	.byte	0x6
+	.byte	0xb2
+	.uaword	0x312
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x7
+	.uaword	0x212
+	.uleb128 0x6
+	.string	"EE_stkfirst"
+	.byte	0x6
+	.byte	0xc7
+	.uaword	0x204
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x6
+	.string	"EE_sys_ceiling"
+	.byte	0x6
+	.byte	0xca
+	.uaword	0x1e6
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x9
+	.string	"EE_th_event_active"
+	.byte	0x6
+	.uahalf	0x111
+	.uaword	0x212
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x9
+	.string	"EE_th_waswaiting"
+	.byte	0x6
+	.uahalf	0x11c
+	.uaword	0x212
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x6
+	.string	"EE_oo_IRQ_disable_count"
+	.byte	0x7
+	.byte	0x33
+	.uaword	0x1e6
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x6
+	.string	"EE_oo_IRQ_suspend_status"
+	.byte	0x7
+	.byte	0x3a
+	.uaword	0x1f5
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x6
+	.string	"EE_ApplicationMode"
+	.byte	0x7
+	.byte	0x3d
+	.uaword	0x1e6
+	.byte	0x1
+	.byte	0x1
+	.byte	0
+.section .debug_abbrev,"",@progbits
+.Ldebug_abbrev0:
+	.uleb128 0x1
+	.uleb128 0x11
+	.byte	0x1
+	.uleb128 0x25
+	.uleb128 0x8
+	.uleb128 0x13
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x1b
+	.uleb128 0x8
+	.uleb128 0x10
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x2
+	.uleb128 0x24
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3e
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0x8
+	.byte	0
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x4
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5
+	.uleb128 0x21
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.byte	0
+.section .debug_aranges,"",@progbits
+	.uaword	0x14
+	.uahalf	0x2
+	.uaword	.Ldebug_info0
+	.byte	0x4
+	.byte	0
+	.uahalf	0
+	.uahalf	0
+	.uaword	0
+	.uaword	0
+.section .debug_line,"",@progbits
+.Ldebug_line0:
+.section .debug_str,"",@progbits
+	.ident	"GCC: (HighTec Release HDP-v4.9.1.0-infineon-1.1-fbb5ca1) 4.9.4 build on 2017-01-30"
